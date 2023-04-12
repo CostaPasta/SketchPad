@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Etch Sketch</title>
+</head>
+<body>
+    <div class="title">Etch Sketch</div>
+    <div class="container">
+        <div class="buttons">
+            <input type="color" id="colorPicker" value="#000000">
+            <button onclick="changeColor(colorInput.value)" id="colorBtn">Color Mode</button>
+            <button onclick="changeColor('white')" class="eraser">Eraser</button>
+            <button onclick="changeColor('random')" class="Random">Random</button>
+            <button class="reset" onclick="reset()">Reset</button>
+            <div class="inputContainer">
+                <div id="sizeValue" class="size-value">16 x 16</div>
+                <input 
+                    type="range"
+                    id="inputField"
+                    value="16"
+                    min="2"
+                    max="64"
+                    onchange="changeBoard(this.value)"
+                />
+            </div>
+        </div>
+        <div class="board"></div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
